@@ -39,7 +39,12 @@ fun HomeScreen() {
             }
         )
 
-        Button( onClick = { }) {
+        Button( onClick = {
+            homeScreenViewModel.previousReading = previousReading
+            homeScreenViewModel.currentReading = currentReading
+            Log.d(TAG, "previousReading = ${homeScreenViewModel.previousReading}")
+            Log.d(TAG, "currentReading = ${homeScreenViewModel.currentReading}")
+        }) {
 
         }
     }
